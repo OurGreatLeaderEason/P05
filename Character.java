@@ -1,5 +1,17 @@
+//////////////// FILE HEADER (INCLUDE IN EVERY FILE) //////////////////////////
+//
+// Title:    P05 Dragon Treasure Game 2.0
+// Course:   CS 300 Fall 2022
+//
+// Author:   Eason Xiao
+// Email:    xiao227@wisc.edu
+// Lecturer: Jeff Nyhoff
+//
 import java.util.ArrayList;
 
+/**
+ * Class that emulates the behavior of a Character
+ */
 public class Character {
     private Room currentRoom; //current room the character is in
     private String label; //a label giving a basic description of the character
@@ -45,4 +57,6 @@ public class Character {
     public void setCurrentRoom(Room newRoom){
         this.currentRoom=newRoom;
     }
+
+ 
 }

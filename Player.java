@@ -1,5 +1,17 @@
+//////////////// FILE HEADER (INCLUDE IN EVERY FILE) //////////////////////////
+//
+// Title:    P05 Dragon Treasure Game 2.0
+// Course:   CS 300 Fall 2022
+//
+// Author:   Eason Xiao
+// Email:    xiao227@wisc.edu
+// Lecturer: Jeff Nyhoff
+//
 import java.util.ArrayList;
 
+/**
+ * A class that emulates the behavior of a Player
+ */
 public class Player extends Character implements Moveable{
     private boolean hasKey;
 
@@ -8,7 +20,7 @@ public class Player extends Character implements Moveable{
      * @param currentRoom the room that the player should start in
      */
     public Player(Room currentRoom) throws IllegalArgumentException{
-        super(currentRoom, "You find yourself in the entrance to a cave holding treasure.");
+        super(currentRoom, "PLAYER");
         this.hasKey=false;
         if(!currentRoom.getDescription().equals("You find yourself in the entrance to a cave holding treasure.")){
             throw new IllegalArgumentException("You can only start in a start room!");

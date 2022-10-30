@@ -1,7 +1,19 @@
+//////////////// FILE HEADER (INCLUDE IN EVERY FILE) //////////////////////////
+//
+// Title:    P05 Dragon Treasure Game 2.0
+// Course:   CS 300 Fall 2022
+//
+// Author:   Eason Xiao
+// Email:    xiao227@wisc.edu
+// Lecturer: Jeff Nyhoff
+//
 import java.util.Random;
 
 import processing.core.PImage;
 
+/**
+ * A class that emulates the behavior of a Portal Room
+ */
 public class PortalRoom extends Room{
     private Random randGen; //random number generator for location picking
     private static final String PORTAL_WARNING = "You feel a distortion in space nearby.\n";

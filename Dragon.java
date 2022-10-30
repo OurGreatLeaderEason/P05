@@ -1,6 +1,18 @@
+//////////////// FILE HEADER (INCLUDE IN EVERY FILE) //////////////////////////
+//
+// Title:    P05 Dragon Treasure Game 2.0
+// Course:   CS 300 Fall 2022
+//
+// Author:   Eason Xiao
+// Email:    xiao227@wisc.edu
+// Lecturer: Jeff Nyhoff
+//
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * A class that emulates the behavior of a dragon
+ */
 public class Dragon extends Character implements Moveable{
     private Random randGen; //random num generator used for moving
     private static final String DRAGON_WARNING = "You hear a fire breathing nearby!\n";
@@ -84,8 +96,23 @@ public boolean canMoveTo(Room destination) {
             return true;
         }
     }
-    return true;
+    return false;
     
+}
+public static ArrayList<Integer> generateOtherSequence(int n, int diff){
+  ArrayList<Integer> numbers = new ArrayList<Integer>();
+  if(n <= 0)
+    return numbers;
+  numbers.add(n);
+  numbers.addAll(generateOtherSequence(n-diff, diff));
+  return numbers;
+}
+
+public static void main(String[] args) {
+  ArrayList<Integer> sequence = generateOtherSequence(20, 5);
+  for(int i = 0; i < sequence.size(); i++) {
+    System.out.print(sequence.get(i) + " ");
+  }
 }
 
 

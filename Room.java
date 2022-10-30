@@ -1,10 +1,20 @@
-/* Class to represent each room of the dungeon as an object*/
+//////////////// FILE HEADER (INCLUDE IN EVERY FILE) //////////////////////////
+//
+// Title:    P05 Dragon Treasure Game 2.0
+// Course:   CS 300 Fall 2022
+//
+// Author:   Eason Xiao
+// Email:    xiao227@wisc.edu
+// Lecturer: Jeff Nyhoff
+//
+
 import java.util.ArrayList;
 import processing.core.PApplet;
 import processing.core.PImage;
 
-/** @author Michelle
-*/
+/**
+ * A class that emulates the behavior of a Room
+ */
 public class Room {
   
   private String description; //verbal description of the room
